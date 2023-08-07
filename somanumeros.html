@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soma nómeros</title>
+</head>
+<body>
+    <script language="JavaScript">
+        let numeros = [];
+        let num = parseFloat(window.prompt("Informe um número (negativo para sair): "));
+        let cont = 0;
+        while (num >= 0) {
+            numeros[cont] = num;
+            num = parseFloat(window.prompt("Informe um número (negativo para sair):"));
+            cont++;
+        }
+        numeros.sort(function(a,b){return a-b});//forma de ordenar um array de números
+        let soma = 0;
+        for (x in numeros) {
+            soma += numeros[x];
+            document.write(numeros[x]+"<br>");
+        }
+        document.write("A soma dos "+numeros.length+" é : "+soma);
+    </script>
+</body>
+</html>
