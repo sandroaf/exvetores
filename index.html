@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplos de Vetores</title>
+</head>
+<body>
+    <script language="JavaScript">
+        /*criando verores - Arrays*/
+        //vetor vazio
+        let vazio = []; // cria um vetor (array) chamado vazio sem nenhum item 
+        let vazio2 = new Array(); //Outra forma de criar array, vazio.
+        document.write("vazio tipo: "+typeof(vazio)); //mostrar o tipo da variável vazio
+        document.write("<br>");
+        document.write(vazio.toString());
+        document.write("<br>");
+        document.write("vazio2 tipo: "+typeof(vazio2)); //mostrar o tipo da variável vazio
+        document.write(vazio2.toString());
+        //vetor de números
+        document.write("<br>");
+        let numerosPares = [2,4,6,8,10];
+        document.write("<br>");
+        document.write(numerosPares.toString());
+        //vetor de string 
+        let alunos = ["Sandro","Pedro","Maria","José"];
+        document.write("<br>");
+        document.write(alunos.toString());
+        //pegar o segundo elemento [1]  
+        document.write("<br><br>Mostrando segundo elemento dos vetores<br>");
+        document.write(numerosPares[1]);
+        document.write("<br>");
+        document.write(alunos[1]);
+        document.write("<br>");
+        //criando array para 4 notas
+        let notas = new Array(4);
+        document.write("<br>");
+        document.write("Numero de Notas: "+notas.length); //mostra quantos elementos tem no Array
+        document.write("<br>");
+        //repetição para informar as notas
+        for (n = 0;n < notas.length;n++) {
+            notas[n] = window.prompt("Informe a nota "+n+":");
+        }    
+        document.write("<br>");
+        document.write(notas.toString());
+        document.write("<br>");
+
+        //Código para listar o nome de uma pessoal colocando cada caracter em uma linha
+        let nome = "";
+        nome = window.prompt("Qual seu nome:");
+        //pecorrendo todos os caracteres de um string
+        for (letra in nome) {
+            document.write(nome[letra]+"<br>");
+        }
+    </script>
+</body>
+</html>
